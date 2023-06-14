@@ -6,6 +6,7 @@ services:
     environment:
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - SKLEARN_ALLOW_DEPRECATED_SKLEARN_PACKAGE_INSTALL=True
     ports:
       - ${EXTERNAL_PORT_DB}:${INTERNAL_PORT_DB}
     networks:
@@ -15,9 +16,9 @@ services:
 
   update_reviews:
     build: .
-    command:
-      - python -m nltk.downloader all
-      - python update.py
+    # command:
+    #   - python -m nltk.downloader all
+    #   - python update.py
     volumes:
       - .:/code
     restart: always
