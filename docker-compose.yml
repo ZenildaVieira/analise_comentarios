@@ -16,12 +16,10 @@ services:
 
   update_reviews:
     build: .
-    # command:
-    #   - python -m nltk.downloader all
-    #   - python update.py
     volumes:
       - .:/code
-    restart: always
+    command: python update.py
+    tty: true
     depends_on:
       - db
     networks:

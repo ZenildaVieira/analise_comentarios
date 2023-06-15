@@ -46,8 +46,8 @@ Navegue no terminal até este diretório e entre com o comando:
 ```
 docker-compose up
 ```
-Este comando fará com que se instalem todas as dependências para rodar o *script*. Nesta etapa, pode ser necessário alguma depuração devido à necessidade de muitas dependências que podem ir mudando com o tempo.
-
-## Rodando o *script*
+Este comando fará com que se instalem todas as dependências para rodar o *script* e rodará o *script*. Nesta etapa, pode ser necessário alguma depuração devido à necessidade de muitas dependências que podem ir mudando com o tempo.
 
 ## Visualizando os resultados
+
+Basta abrir o arquivo `Reviews_Painel.pbix`. Depois de atualizado o banco de dados, com a imagem *docker* `analise_comentarios-db-1` rodando, no painel, ir em `Arquivo -> Opções e configurações -> Configurações da fonte de dados` e, na tela que abrir, ir em `Alterar fonte`, apontando para o endereço e porta de onde estiver rodando a imagem *docker*.
