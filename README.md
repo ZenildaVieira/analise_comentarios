@@ -50,4 +50,6 @@ Este comando fará com que se instalem todas as dependências para rodar o *scri
 
 ## Visualizando os resultados
 
-Basta abrir o arquivo `Reviews_Painel.pbix`. Depois de atualizado o banco de dados, com a imagem *docker* `analise_comentarios-db-1` rodando, no painel, ir em `Arquivo -> Opções e configurações -> Configurações da fonte de dados` e, na tela que abrir, ir em `Alterar fonte`, apontando para o endereço e porta de onde estiver rodando a imagem *docker*.
+Basta abrir o arquivo `reviews_painel.pbix`. Para atualizar os dados do painel:
+1. Suba o conteiner `db` do docker com o comando `docker-compose up -d db`.
+2. No PowerBI, vá em `Arquivo -> Opções e configurações -> Configurações da fonte de dados` e, na tela que abrir, escolha `Alterar fonte` e atualize o endereço e porta de onde estiver rodando a imagem *docker*.
